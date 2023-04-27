@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dancing+Script&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <title>Biscoito da sorte</title>
+</head>
+
+<body>
+    <div class="screen1"> <!--Aqui é a class para depois fazer por etapas no CSS e JS de screen 1 e 2.-->
+        <div class="box">
+            <h1>Qual é a sua sorte de hoje?</h1>
+            <p>Abra o biscoito e descubra</p>
+            <img src="images/fortune-cookie.svg" 
+            alt="biscoito da sorte fechado">
+        </div>
+    </div>
+    <div class="screen2 hide">
+        <div class="box">
+            <h1>Aqui está a sua sorte de hoje:</h1>
+            <p></p>
+            <img src="images/opened-cookie.svg" 
+            alt="biscoito da sorte aberto">
+
+            <button>Abrir outro biscoito</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!--Conclusão - Estrutura HTML do projeto
+Uma estratua bem simples, poucas linhas, class, div, etc, por ser uma estrutura bem pequena eu não utilizei um H2,
+visto que ambos tem as mesmas fontes, weight, size, line-height, alinhamentos, etc.... facilitaria na hora da estru-
+tura do meu CSS.
+Vale ressaltar também que se fosse um projeto maior com mais elementos exigiria a utilização de H1, H2, H3, etc... até mesmo
+para uma boa concatenação do projeto, pois, caso necessário, mudaria os elementos no meu CSS ou aqui mesmo não seria necessário
+alterar um elemento de cada vez e sim apenas no que foi exigido.-->

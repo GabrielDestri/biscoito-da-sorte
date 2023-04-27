@@ -1,0 +1,202 @@
+*{ /*sempre importante reciclar minha page*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{ /*utilização do :root para bons constumes na hora do projeto, caso necessário alterar color, font, etc é só estilizar em 
+    um único campo ao invés de ir elemento por elemento...*/
+    font-size: 62.5%; /*sempre MUITO importante para fazer os 10%*/
+
+    --bg-page: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    --bg-box: white;
+    --bg-button: #FF9500;
+    --bg-box-sort: #FFFFFF;
+
+    --ff-title: 'Montserrat', sans-serif;
+    --ff-text-box: 'DM Sans', sans-serif;
+    --ff-text-sort: 'Dancing Script', cursive;
+
+    --fc-text-primary: #34355B;
+    --fc-text-sort: black;
+    --fc-button: #FFFFFF;
+}
+
+body{
+    height: 100vh;
+    display: grid; /*ajuda para centralizar meu proj*/
+    place-items: center;
+
+    background: var(--bg-page);
+}
+
+.hide{
+    display: none;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 4.8rem 6.4rem;
+    gap: 1.7rem;
+}
+
+/*screen 1, ou melhor, quando o biscoito está fechado*/
+.screen1, .screen2{
+    height: 42.4rem;
+    width: 42.8rem;
+
+    text-align: center;
+
+    background: var(--bg-box);
+    box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: .5rem;
+}
+
+.screen1 h1{
+    font-family: var(--ff-title);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.screen1 p{
+    font-family: var(--ff-text-box);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.screen1 img{
+    cursor: pointer;
+
+    width: 30rem;
+    height: 20rem;
+}
+
+.screen1 img:hover{
+    animation: shake-coockie .25s infinite;
+}
+
+@keyframes shake-coockie {
+    0% {
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateY(1.5%);
+    }
+    50% {
+        transform: translateX(-2.5%);
+    }
+    75%{
+        transform: translateY(-1.5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*Screen 2 - biscoito aberto*/
+.screen2{
+    height: 56.4rem;
+}
+.screen2 h1{
+    font-family: var(--ff-title);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    
+    text-align: center;
+
+    color: var(--fc-text-primary);
+}
+
+.screen2 img{
+    margin: 4.3rem 0 4.3rem;
+}
+
+.screen2 p{
+    font-family: var(--ff-text-sort);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.0rem;
+    gap: 1.0rem;
+    
+    width: 29.3rem;
+    height: 10.7rem;
+    
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+    
+    animation: downtop 2s 10ms backwards;
+    
+}
+
+.screen2 button{
+    
+    font-family: var(--ff-text-box);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.6rem;
+    gap: 1.0rem;
+    
+    width: 17.4rem;
+    height: 5.2rem;
+    
+    background: #FF9500;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+}
+
+@keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateY(10rem);
+        width: 0%;
+        font-size: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 720px) {
+   
+    .screen1, .screen2{
+        width: 32rem;
+
+        margin: 4.8rem 0;
+    }
+}
